@@ -23,10 +23,10 @@ for batch_size in batch_sizes:
     for matrix_size in matrix_sizes:
         # batch1 = torch.randn(batch_size, matrix_size, matrix_size, device="mps")
         # batch2 = torch.randn(batch_size, matrix_size, matrix_size, device="mps")
-        # batch1 = torch.randn(batch_size, matrix_size, matrix_size, device="mps", dtype=torch.float16)
-        # batch2 = torch.randn(batch_size, matrix_size, matrix_size, device="mps", dtype=torch.float16)
-        batch1 = torch.randn(batch_size, matrix_size, matrix_size, device="mps", dtype=torch.bfloat16)
-        batch2 = torch.randn(batch_size, matrix_size, matrix_size, device="mps", dtype=torch.bfloat16)
+        batch1 = torch.randn(batch_size, matrix_size, matrix_size, device="mps", dtype=torch.float16)
+        batch2 = torch.randn(batch_size, matrix_size, matrix_size, device="mps", dtype=torch.float16)
+        # batch1 = torch.randn(batch_size, matrix_size, matrix_size, device="mps", dtype=torch.bfloat16)
+        # batch2 = torch.randn(batch_size, matrix_size, matrix_size, device="mps", dtype=torch.bfloat16)
         import threading
         # breakpoint()
         

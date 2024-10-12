@@ -1,3 +1,6 @@
 MPSMatrix/mpsmm-fp16
 MPSMatrix/mpsmm-fp32
 metal_half/matrix_multiplication.air
+*.trace/
+
+.DS_Store

@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
         id<MTLDevice> device = nil;
         id<MTLDevice> selectedDevice = nil;
         for (id<MTLDevice> dev in devices) {
-            NSLog(@"Metal device: %@", dev.name);
+            // NSLog(@"Metal device: %@", dev.name);
             if ([dev supportsFamily:MTLGPUFamilyApple1]) {
                 selectedDevice = dev;
                 break;
@@ -46,12 +46,13 @@ int main(int argc, const char * argv[]) {
             return -1;
         }
         device = selectedDevice;
-        NSLog(@"Selected Metal device: %@", selectedDevice.name);
+        // NSLog(@"Selected Metal device: %@", selectedDevice.name);
         
 
         // Check if the device has hardware support for float16
         if ([device supportsFeatureSet:MTLFeatureSet_macOS_GPUFamily1_v4]) {
-            NSLog(@"The device %@ has hardware support for float16.", device.name);
+            // NSLog(@"The device %@ has hardware support for float16.", device.name);
+            ;
         } else {
             NSLog(@"The device %@ does not have native hardware support for float16.", device.name);
         }
